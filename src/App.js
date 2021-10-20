@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/NavBar/Navbar';
 import Home from './pages/Home';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetail from './components/ItemDetail/ItemDetail';
 import DetailPage from './pages/Detailpage';
 
 function App() {
@@ -16,6 +15,7 @@ function App() {
       <Switch>
         <Route exact path="/productos">
           <ItemListContainer/>
+          <ItemDetail/>
         </Route>
 
         <Route exact path="/productos/:id">
